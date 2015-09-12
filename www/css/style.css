@@ -1,0 +1,21 @@
+/* Empty. Add your own CSS if you like */
+
+.toastr {
+    opacity: 0;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px;
+    background-color: #C2F7FF;
+    position: fixed;
+    bottom: 0px;
+    -webkit-transition: all 1s;
+    border-radius: 5px;
+    border: 4px solid #fff;
+}
+
+.toastr.show {
+    opacity: 1;
+}
+.ng-leave-active,.ng-leave {
+     display:none;   
+}
