@@ -132,6 +132,16 @@ angular.module('starter.controllers', ['myservices'])
         }
     }
 
+    var broadcastAll = function (err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(data);
+            $scope.sendToastr(data.msg);
+        }
+
+    }
+
     io.socket.on("create", function (msg) {
         createPost(null, msg);
     });
@@ -145,6 +155,9 @@ angular.module('starter.controllers', ['myservices'])
     });
 
 
+    io.socket.on("broadcast", function (msg) {
+        broadcastAll(null, msg);
+    });
 
 
 
